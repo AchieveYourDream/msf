@@ -4,15 +4,12 @@ import com.wb.msfcore.util.UUIDUtil;
 import org.apache.commons.codec.binary.Base64;
 
 import javax.imageio.ImageIO;
-import java.awt.Color;
-import java.awt.Font;
-import java.awt.Graphics2D;
+import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.ByteArrayOutputStream;
 import java.security.SecureRandom;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Random;
 
 /**
  * 验证码生成器
