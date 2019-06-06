@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wb.msfcore.dao.SysUserMapper" >
+  <resultMap id="BaseResultMap" type="com.wb.msfcore.entity.SysUser" >
+    <id column="username" property="username" jdbcType="VARCHAR" />
+    <result column="user_id" property="userId" jdbcType="VARCHAR" />
+    <result column="password" property="password" jdbcType="VARCHAR" />
+    <result column="lastname" property="lastname" jdbcType="VARCHAR" />
+    <result column="email" property="email" jdbcType="VARCHAR" />
+    <result column="mobilephone" property="mobilephone" jdbcType="VARCHAR" />
+    <result column="description" property="description" jdbcType="VARCHAR" />
+    <result column="skin" property="skin" jdbcType="VARCHAR" />
+    <result column="user_type" property="userType" jdbcType="VARCHAR" />
+    <result column="user_status" property="userStatus" jdbcType="VARCHAR" />
+    <result column="start_date" property="startDate" jdbcType="DATE" />
+    <result column="end_date" property="endDate" jdbcType="DATE" />
+    <result column="password_change_date" property="passwordChangeDate" jdbcType="DATE" />
+    <result column="default_role_id" property="defaultRoleId" jdbcType="VARCHAR" />
+    <result column="create_date" property="createDate" jdbcType="DATE" />
+    <result column="last_update_date" property="lastUpdateDate" jdbcType="DATE" />
+    <result column="attribute1" property="attribute1" jdbcType="VARCHAR" />
+    <result column="attribute2" property="attribute2" jdbcType="VARCHAR" />
+    <result column="attribute3" property="attribute3" jdbcType="VARCHAR" />
+    <result column="attribute4" property="attribute4" jdbcType="VARCHAR" />
+    <result column="attribute5" property="attribute5" jdbcType="VARCHAR" />
+    <result column="attribute6" property="attribute6" jdbcType="VARCHAR" />
+    <result column="attribute7" property="attribute7" jdbcType="VARCHAR" />
+    <result column="attribute8" property="attribute8" jdbcType="VARCHAR" />
+    <result column="attribute9" property="attribute9" jdbcType="VARCHAR" />
+    <result column="attribute10" property="attribute10" jdbcType="VARCHAR" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from sys_user
+    where username = #{username,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.wb.msfcore.entity.SysUser" >
+    insert into sys_user (username, user_id, password, 
+      lastname, email, mobilephone, 
+      description, skin, user_type, 
+      user_status, start_date, end_date, 
+      password_change_date, default_role_id, create_date, 
+      last_update_date, attribute1, attribute2, 
+      attribute3, attribute4, attribute5, 
+      attribute6, attribute7, attribute8, 
+      attribute9, attribute10)
+    values (#{username,jdbcType=VARCHAR}, #{userId,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, 
+      #{lastname,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR}, #{mobilephone,jdbcType=VARCHAR}, 
+      #{description,jdbcType=VARCHAR}, #{skin,jdbcType=VARCHAR}, #{userType,jdbcType=VARCHAR}, 
+      #{userStatus,jdbcType=VARCHAR}, #{startDate,jdbcType=DATE}, #{endDate,jdbcType=DATE}, 
+      #{passwordChangeDate,jdbcType=DATE}, #{defaultRoleId,jdbcType=VARCHAR}, #{createDate,jdbcType=DATE}, 
+      #{lastUpdateDate,jdbcType=DATE}, #{attribute1,jdbcType=VARCHAR}, #{attribute2,jdbcType=VARCHAR}, 
+      #{attribute3,jdbcType=VARCHAR}, #{attribute4,jdbcType=VARCHAR}, #{attribute5,jdbcType=VARCHAR}, 
+      #{attribute6,jdbcType=VARCHAR}, #{attribute7,jdbcType=VARCHAR}, #{attribute8,jdbcType=VARCHAR}, 
+      #{attribute9,jdbcType=VARCHAR}, #{attribute10,jdbcType=VARCHAR})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.wb.msfcore.entity.SysUser" >
+    update sys_user
+    set user_id = #{userId,jdbcType=VARCHAR},
+      password = #{password,jdbcType=VARCHAR},
+      lastname = #{lastname,jdbcType=VARCHAR},
+      email = #{email,jdbcType=VARCHAR},
+      mobilephone = #{mobilephone,jdbcType=VARCHAR},
+      description = #{description,jdbcType=VARCHAR},
+      skin = #{skin,jdbcType=VARCHAR},
+      user_type = #{userType,jdbcType=VARCHAR},
+      user_status = #{userStatus,jdbcType=VARCHAR},
+      start_date = #{startDate,jdbcType=DATE},
+      end_date = #{endDate,jdbcType=DATE},
+      password_change_date = #{passwordChangeDate,jdbcType=DATE},
+      default_role_id = #{defaultRoleId,jdbcType=VARCHAR},
+      create_date = #{createDate,jdbcType=DATE},
+      last_update_date = #{lastUpdateDate,jdbcType=DATE},
+      attribute1 = #{attribute1,jdbcType=VARCHAR},
+      attribute2 = #{attribute2,jdbcType=VARCHAR},
+      attribute3 = #{attribute3,jdbcType=VARCHAR},
+      attribute4 = #{attribute4,jdbcType=VARCHAR},
+      attribute5 = #{attribute5,jdbcType=VARCHAR},
+      attribute6 = #{attribute6,jdbcType=VARCHAR},
+      attribute7 = #{attribute7,jdbcType=VARCHAR},
+      attribute8 = #{attribute8,jdbcType=VARCHAR},
+      attribute9 = #{attribute9,jdbcType=VARCHAR},
+      attribute10 = #{attribute10,jdbcType=VARCHAR}
+    where username = #{username,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select username, user_id, password, lastname, email, mobilephone, description, skin, 
+    user_type, user_status, start_date, end_date, password_change_date, default_role_id, 
+    create_date, last_update_date, attribute1, attribute2, attribute3, attribute4, attribute5, 
+    attribute6, attribute7, attribute8, attribute9, attribute10
+    from sys_user
+    where username = #{username,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select username, user_id, password, lastname, email, mobilephone, description, skin, 
+    user_type, user_status, start_date, end_date, password_change_date, default_role_id, 
+    create_date, last_update_date, attribute1, attribute2, attribute3, attribute4, attribute5, 
+    attribute6, attribute7, attribute8, attribute9, attribute10
+    from sys_user
+  </select>
+</mapper>

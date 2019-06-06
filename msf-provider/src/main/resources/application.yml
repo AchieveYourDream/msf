@@ -1,0 +1,44 @@
+
+#spring:
+#  application:
+#    name: msf-provider
+server:
+  port: 8081
+
+mybatis:
+  mapper-locations: classpath*:com/wb/**/mapper/*Mapper.xml
+  configuration:
+      map-underscore-to-camel-case: true
+spring:
+  application:
+    name: msf-provider
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://127.0.0.1:3306/msf?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: 123456
+  security:
+   basic:
+      enabled: false
+   user:
+     name: wb
+     password: 123456
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://${spring.security.user.name}:${spring.security.user.password}@eureka01:7001/eureka/,http://eureka02:7002/eureka/
+  instance:
+  #注册名称
+    instance-id: msf-provider
+  #注册显示ip
+    prefer-ip-address: true
+info:
+ app.name: msf-provider
+ company.name: wangbin
+
+
+logging:
+  level:
+    root : debug
+

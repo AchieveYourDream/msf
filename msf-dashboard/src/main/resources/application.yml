@@ -1,0 +1,17 @@
+
+
+
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://127.0.0.1:3306/msf?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: 123456
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+server:
+  port: 9001
+
+

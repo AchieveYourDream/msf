@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="msf-config" />
+        <module name="msf-consumer" />
+        <module name="msf-core" />
+        <module name="msf-dashboard" />
+        <module name="msf-eureka" />
+        <module name="msf-eureka01" />
+        <module name="msf-provider" />
+        <module name="msf-proviter01" />
+        <module name="msf-verify" />
+        <module name="msf-zuul" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="msf" target="1.8" />
+      <module name="msf-config" target="1.8" />
+      <module name="msf-consumer" target="1.8" />
+      <module name="msf-core" target="1.8" />
+      <module name="msf-dashboard" target="1.8" />
+      <module name="msf-eureka" target="1.8" />
+      <module name="msf-eureka (1)" target="1.8" />
+      <module name="msf-eureka01" target="1.8" />
+      <module name="msf-provider" target="1.8" />
+      <module name="msf-proviter-hystrix" target="1.8" />
+      <module name="msf-proviter01" target="1.8" />
+      <module name="msf-verify" target="1.8" />
+      <module name="msf-zuul" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

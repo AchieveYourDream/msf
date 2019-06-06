@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/msf.iml" filepath="$PROJECT_DIR$/msf.iml" />
+      <module fileurl="file://$PROJECT_DIR$/msf-config/msf-config.iml" filepath="$PROJECT_DIR$/msf-config/msf-config.iml" />
+      <module fileurl="file://$PROJECT_DIR$/msf-consumer/msf-consumer.iml" filepath="$PROJECT_DIR$/msf-consumer/msf-consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/msf-core/msf-core.iml" filepath="$PROJECT_DIR$/msf-core/msf-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/msf-dashboard/msf-dashboard.iml" filepath="$PROJECT_DIR$/msf-dashboard/msf-dashboard.iml" />
+      <module fileurl="file://$PROJECT_DIR$/msf-eureka/msf-eureka.iml" filepath="$PROJECT_DIR$/msf-eureka/msf-eureka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/msf-eureka01/msf-eureka01.iml" filepath="$PROJECT_DIR$/msf-eureka01/msf-eureka01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/msf-provider/msf-provider.iml" filepath="$PROJECT_DIR$/msf-provider/msf-provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/msf-proviter01/msf-proviter01.iml" filepath="$PROJECT_DIR$/msf-proviter01/msf-proviter01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/msf-verify/msf-verify.iml" filepath="$PROJECT_DIR$/msf-verify/msf-verify.iml" />
+      <module fileurl="file://$PROJECT_DIR$/msf-zuul/msf-zuul.iml" filepath="$PROJECT_DIR$/msf-zuul/msf-zuul.iml" />
+    </modules>
+  </component>
+</project>

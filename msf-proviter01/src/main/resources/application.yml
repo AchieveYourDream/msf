@@ -1,0 +1,50 @@
+server:
+  port: 8082
+
+mybatis:
+  mapper-locations: classpath*:com/wb/**/mapper/*Mapper.xml
+  configuration:
+      map-underscore-to-camel-case: true
+spring:
+  application:
+    name: msf-provider
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://127.0.0.1:3306/msf?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: 123456
+  security:
+        user:
+          name: wb
+          password: 123456
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://${spring.security.user.name}:${spring.security.user.password}@eureka01:7001/eureka/,http://${spring.security.user.name}:${spring.security.user.password}@eureka02:7002/eureka/
+  instance:
+  #注册名称
+    instance-id: msf-provider01
+  #注册显示ip
+    prefer-ip-address: true
+info:
+ app.name: msf-provider01
+ company.name: wangbin
+
+
+
+
+
+
+
+
+
+'amount': '36'
+'batch': '9999999999'
+'fabric': 'WBP11180'
+'materialCode': 'KLD1482WBP1118000'
+'materialName': '领带'
+'materialType': 'material_out'
+'price': '199.00'
+'storeCode': 'C2MSW000'
+'warehouseCode': '2015'

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/msf-core/pom.xml" />
+        <option value="$PROJECT_DIR$/msf-provider/pom.xml" />
+        <option value="$PROJECT_DIR$/msf-consumer/pom.xml" />
+        <option value="$PROJECT_DIR$/msf-eureka/pom.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/msf-eureka01/pom.xml" />
+        <option value="$PROJECT_DIR$/msf-proviter01/pom.xml" />
+        <option value="$PROJECT_DIR$/msf-dashboard/pom.xml" />
+        <option value="$PROJECT_DIR$/msf-zuul/pom.xml" />
+        <option value="$PROJECT_DIR$/msf-config/pom.xml" />
+        <option value="$PROJECT_DIR$/msf-verify/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

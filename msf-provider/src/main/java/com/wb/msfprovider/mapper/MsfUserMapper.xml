@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wb.msfprovider.dao.MsfUserMapper" >
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from msf_user
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.wb.msfcore.entity.MsfUser" >
+    insert into msf_user (id, name, data_sourec
+      )
+    values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{dataSourec,jdbcType=VARCHAR}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.wb.msfcore.entity.MsfUser" >
+    update msf_user
+    set name = #{name,jdbcType=VARCHAR},
+      data_sourec = #{dataSourec,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" resultType="com.wb.msfcore.entity.MsfUser" parameterType="java.lang.Integer" >
+    select id, name, data_sourec
+    from msf_user
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultType="com.wb.msfcore.entity.MsfUser" >
+    select id, name, data_sourec
+    from msf_user
+  </select>
+</mapper>

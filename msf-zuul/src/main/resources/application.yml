@@ -1,0 +1,57 @@
+server:
+  port: 9527
+
+spring:
+  application:
+    name: msf-zuul
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://127.0.0.1:3306/msf?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: 123456
+  security:
+   basic:
+     enabled: false
+   user:
+     name: wb
+     password: 123456
+  redis:
+    host: 192.168.79.135
+    password:
+    port: 6379
+    pool:
+      max-idle: 100
+      min-idle: 1
+      max-active: 1000
+      max-wait: -1
+eureka:
+  client:
+    service-url:
+      defaultZone: http://${spring.security.user.name}:${spring.security.user.password}@eureka01:7001/eureka/,http://${spring.security.user.name}:${spring.security.user.password}@eureka02:7002/eureka/
+  instance:
+  #注册名称
+    instance-id: msf-zuul
+  #注册显示ip
+    prefer-ip-address: true
+info:
+ app.name: msf-zuul
+ company.name: wangbin
+zuul:
+  routes:
+  #映射虚拟路径
+    myproviter.serviceId: msf-provider
+    myproviter.path: /myproviter/**
+    myproviter1.serviceId: msf-verify
+    myproviter1.path: /msfverify/**
+  #原路径不能访问
+  ignored-services: '*'
+  prefix: /wb
+
+jwt:
+  secret: JWT_SECRET
+  expiration: 86400
+logging:
+  level:
+    root : debug
+
+

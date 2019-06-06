@@ -1,0 +1,19 @@
+server:
+  port: 3344
+spring:
+  application:
+    name: msf-config
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://127.0.0.1:3306/msf?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: 123456
+  cloud:
+    config:
+      server:
+        git:
+          uri: git@github.com:AchieveYourDream/spring-cloud-config.git
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
