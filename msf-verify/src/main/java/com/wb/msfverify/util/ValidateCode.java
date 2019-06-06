@@ -9,6 +9,7 @@ import java.awt.Font;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 import java.io.ByteArrayOutputStream;
+import java.security.SecureRandom;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
@@ -46,7 +47,7 @@ public  class ValidateCode {
         BufferedImage buffImg = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
         Graphics2D g = buffImg.createGraphics();
         // 生成随机数
-        Random random = new Random();
+        SecureRandom random = new SecureRandom();
         // 将图像填充为白色
         g.setColor(Color.WHITE);
         g.fillRect(0, 0, width, height);
